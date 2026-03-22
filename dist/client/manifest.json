@@ -1,0 +1,16 @@
+{
+  "name": "MK2PDF — Markdown to PDF Editor",
+  "short_name": "MK2PDF",
+  "description": "Convert Markdown to beautiful PDFs instantly in your browser with live preview and professional templates.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#7c5cfc",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

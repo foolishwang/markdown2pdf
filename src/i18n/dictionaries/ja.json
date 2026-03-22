@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "MK2PDF — Markdown to PDF エディター | プライバシー優先",
+    "description": "強力なオンラインMarkdown to PDFコンバーター。ライブプレビュー、テンプレート、エクスポート機能付き。プライバシー優先 — 全てブラウザ内で動作します。"
+  },
+  "header": {
+    "logoBadge": "Pro",
+    "themeToggle": "テーマ枠線"
+  },
+  "toolbar": {
+    "upload": "📁 ファイルを読み込む",
+    "uploadFormats": "MD, TXT, HTML, JSON, CSV, TSV",
+    "templates": "📄 テンプレート",
+    "export": "📥 エクスポート",
+    "exporting": "生成中..."
+  },
+  "editor": {
+    "title": "✏️ エディター",
+    "words": "単語",
+    "chars": "文字",
+    "lines": "行"
+  },
+  "preview": {
+    "title": "👁️ プレビュー"
+  },
+  "statusBar": {
+    "ready": "準備完了",
+    "shortcut": "Ctrl+S でエクスポート",
+    "markdown": "Markdown",
+    "multiExport": "マルチフォーマット出力",
+    "encoding": "UTF-8"
+  },
+  "toast": {
+    "fileLoaded": "{format} ファイルを Markdown に変換しました",
+    "fileError": "対応形式: Markdown, text, HTML, JSON, CSV, TSV",
+    "exportSuccess": "{format} のエクスポートが完了しました！",
+    "exportError": "エクスポートに失敗しました。再試行してください。",
+    "previewNotReady": "プレビューの準備ができていません。再試行してください。"
+  },
+  "modal": {
+    "title": "ドキュメントをエクスポート",
+    "filename": "ファイル名",
+    "format": "出力形式",
+    "formatHint": "PDF、HTML、DOC、RTF、TXT、MD、JSON、CSV、XML をブラウザ内で出力できます。",
+    "pageSize": "用紙サイズ",
+    "margin": "余白 (mm)",
+    "quality": "画質",
+    "pdfOptions": "PDF オプション",
+    "cancel": "キャンセル",
+    "download": "ファイルをダウンロード",
+    "generating": "生成中...",
+    "formats": {
+      "pdf": "PDF ドキュメント (.pdf)",
+      "html": "HTML ページ (.html)",
+      "doc": "Word ドキュメント (.doc)",
+      "rtf": "RTF ドキュメント (.rtf)",
+      "txt": "プレーンテキスト (.txt)",
+      "md": "Markdown (.md)",
+      "json": "構造化 JSON (.json)",
+      "csv": "表から CSV (.csv)",
+      "xml": "XML アウトライン (.xml)"
+    },
+    "sizeA4": "A4 (210 × 297 mm)",
+    "sizeLetter": "レター (8.5 × 11 in)",
+    "qualityStandard": "標準 (80%)",
+    "qualityHigh": "高 (95%)",
+    "qualityMax": "最高 (100%)"
+  },
+  "dragdrop": {
+    "message": "ドキュメントをここにドロップして Markdown に変換"
+  },
+  "welcome": "# MK2PDF へようこそ ✨\n\nNext.js で構築された強力でプライバシー優先の **Markdown to PDF** エディター。\n\n---\n\n## 機能\n\n- ✅ **ライブプレビュー** — 変更をリアルタイムで確認\n- ✅ **リッチフォーマット** — GitHub Flavored Markdown を完全サポート\n- ✅ **PDF エクスポート** — 高品質なPDFを即座にダウンロード\n- ✅ **テンプレート** — プロフェッショナルなテンプレートから開始\n- ✅ **ダーク/ライトモード** — お好みのテーマを選択\n- ✅ **プライバシー優先** — 全てがブラウザ内で動作\n\n## クイックスタート\n\n左のパネルでこのテキストを編集してみてください！プレビューは即座に更新されます。\n\n### コードブロック\n\n```typescript\ninterface Document {\n  title: string;\n  content: string;\n  createdAt: Date;\n}\n\nfunction createPdf(doc: Document): Promise<Blob> {\n  // PDFを生成するロジック\n  return generatePdf(doc);\n}\n```\n\n### テーブル\n\n| 機能             | 状態 | 優先度 |\n| :--------------- | :--: | :----: |\n| ライブプレビュー |  ✅  |   高   |\n| PDF エクスポート |  ✅  |   高   |\n| テンプレート     |  ✅  |   中   |\n| ダークモード     |  ✅  |   中   |\n\n### 引用\n\n> \"未来を予測する最良の方法は、それを創り出すことだ。\"\n> — ピーター・ドラッカー\n\n### タスクリスト\n\n- [x] MK2PDFをインストールする\n- [x] ドキュメントを書く\n- [ ] PDFにエクスポートする\n- [ ] 世界と共有する\n\n---\n\n*Next.js、CodeMirror、React Markdownを使って精巧に作られています ❤️*\n"
+}

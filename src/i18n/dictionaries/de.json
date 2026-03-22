@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "MK2PDF — Markdown zu PDF Editor | Privatsphäre zuerst",
+    "description": "Ein leistungsstarker Online-Konverter von Markdown zu PDF mit Live-Vorschau, Vorlagen und Exportoptionen. Privatsphäre an erster Stelle — alles läuft in Ihrem Browser ab."
+  },
+  "header": {
+    "logoBadge": "Pro",
+    "themeToggle": "Theme umschalten"
+  },
+  "toolbar": {
+    "upload": "📁 Datei importieren",
+    "uploadFormats": "MD, TXT, HTML, JSON, CSV, TSV",
+    "templates": "📄 Vorlagen",
+    "export": "📥 Exportieren",
+    "exporting": "Generiere..."
+  },
+  "editor": {
+    "title": "✏️ Editor",
+    "words": "Wörter",
+    "chars": "Zeichen",
+    "lines": "Zeilen"
+  },
+  "preview": {
+    "title": "👁️ Vorschau"
+  },
+  "statusBar": {
+    "ready": "Bereit",
+    "shortcut": "Strg+S zum Exportieren",
+    "markdown": "Markdown",
+    "multiExport": "Mehrformat-Export",
+    "encoding": "UTF-8"
+  },
+  "toast": {
+    "fileLoaded": "{format}-Datei wurde in Markdown umgewandelt",
+    "fileError": "Unterstützte Formate: Markdown, Text, HTML, JSON, CSV, TSV",
+    "exportSuccess": "{format} erfolgreich exportiert!",
+    "exportError": "Export fehlgeschlagen. Bitte erneut versuchen.",
+    "previewNotReady": "Vorschau noch nicht bereit. Bitte erneut versuchen."
+  },
+  "modal": {
+    "title": "Dokument exportieren",
+    "filename": "Dateiname",
+    "format": "Ausgabeformat",
+    "formatHint": "PDF, HTML, DOC, RTF, TXT, MD, JSON, CSV und XML werden direkt im Browser erzeugt.",
+    "pageSize": "Seitengröße",
+    "margin": "Rand (mm)",
+    "quality": "Bildqualität",
+    "pdfOptions": "PDF-Optionen",
+    "cancel": "Abbrechen",
+    "download": "Datei herunterladen",
+    "generating": "Generiere...",
+    "formats": {
+      "pdf": "PDF-Dokument (.pdf)",
+      "html": "HTML-Seite (.html)",
+      "doc": "Word-Dokument (.doc)",
+      "rtf": "Rich-Text-Format (.rtf)",
+      "txt": "Textdatei (.txt)",
+      "md": "Markdown (.md)",
+      "json": "Strukturiertes JSON (.json)",
+      "csv": "CSV aus Tabellen (.csv)",
+      "xml": "XML-Gliederung (.xml)"
+    },
+    "sizeA4": "A4 (210 × 297 mm)",
+    "sizeLetter": "Brief (8.5 × 11 in)",
+    "qualityStandard": "Standard (80%)",
+    "qualityHigh": "Hoch (95%)",
+    "qualityMax": "Maximal (100%)"
+  },
+  "dragdrop": {
+    "message": "Dokument hier ablegen, um es in Markdown umzuwandeln"
+  },
+  "welcome": "# Willkommen bei MK2PDF ✨\n\nEin leistungsstarker, privatsphäre-orientierter **Markdown-zu-PDF**-Editor, entwickelt mit Next.js.\n\n---\n\n## Funktionen\n\n- ✅ **Live-Vorschau** — Sehen Sie Ihre Änderungen in Echtzeit\n- ✅ **Umfangreiche Formatierung** — Volle Unterstützung für GitHub Flavored Markdown\n- ✅ **PDF-Export** — Laden Sie sofort hochwertige PDFs herunter\n- ✅ **Vorlagen** — Beginnen Sie mit professionellen Vorlagen\n- ✅ **Dunkel-/Hell-Modus** — Wählen Sie Ihr bevorzugtes Design\n- ✅ **Privatsphäre zuerst** — Alles läuft in Ihrem Browser ab\n\n## Schnellstart\n\nBearbeiten Sie einfach diesen Text im linken Fenster! Die Vorschau wird sofort aktualisiert.\n\n### Code-Blöcke\n\n```typescript\ninterface Document {\n  title: string;\n  content: string;\n  createdAt: Date;\n}\n\nfunction createPdf(doc: Document): Promise<Blob> {\n  // Ihre PDF-Generierungslogik hier\n  return generatePdf(doc);\n}\n```\n\n### Tabellen\n\n| Funktion           | Status | Priorität |\n| :----------------- | :----: | :-------: |\n| Live-Vorschau      |   ✅   |   Hoch    |\n| PDF-Export         |   ✅   |   Hoch    |\n| Vorlagen           |   ✅   |  Mittel   |\n| Dunkel-Modus       |   ✅   |  Mittel   |\n\n### Zitate\n\n> \"Der beste Weg, die Zukunft vorauszusagen, ist, sie zu erfinden.\"\n> — Peter Drucker\n\n### Aufgabenlisten\n\n- [x] MK2PDF installieren\n- [x] Ihr Dokument schreiben\n- [ ] Als PDF exportieren\n- [ ] Mit der Welt teilen\n\n---\n\n*Gemacht mit ❤️ unter Verwendung von Next.js, CodeMirror und React Markdown*\n"
+}

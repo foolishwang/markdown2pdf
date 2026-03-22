@@ -3,12 +3,13 @@
 import CodeMirror from '@uiw/react-codemirror';
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
 import { languages } from '@codemirror/language-data';
-import { EditorView } from '@codemirror/view';
+import { EditorView, type ViewUpdate } from '@codemirror/view';
 
 interface EditorClientProps {
   value: string;
   onChange: (value: string) => void;
   theme: 'dark' | 'light';
+  onEditorViewReady?: (view: EditorView) => void;
 }
 
 const darkTheme = EditorView.theme(
@@ -16,6 +17,10 @@ const darkTheme = EditorView.theme(
     '&': {
       backgroundColor: 'var(--bg-secondary)',
       color: 'var(--text-primary)',
+      height: '100%',
+    },
+    '.cm-scroller': {
+      overflow: 'auto',
     },
     '.cm-content': {
       caretColor: 'var(--accent-primary)',
@@ -47,6 +52,10 @@ const lightTheme = EditorView.theme(
     '&': {
       backgroundColor: 'var(--bg-secondary)',
       color: 'var(--text-primary)',
+      height: '100%',
+    },
+    '.cm-scroller': {
+      overflow: 'auto',
     },
     '.cm-content': {
       caretColor: 'var(--accent-primary)',
@@ -73,7 +82,12 @@ const lightTheme = EditorView.theme(
   { dark: false }
 );
 
-export default function EditorClient({ value, onChange, theme }: EditorClientProps) {
+export default function EditorClient({
+  value,
+  onChange,
+  theme,
+  onEditorViewReady,
+}: EditorClientProps) {
   return (
     <CodeMirror
       value={value}
@@ -82,8 +96,10 @@ export default function EditorClient({ value, onChange, theme }: EditorClientPro
       extensions={[
         markdown({ base: markdownLanguage, codeLanguages: languages }),
         EditorView.lineWrapping,
-        EditorView.updateListener.of((update) => {
-          (window as any).currentEditorView = update.view;
+        EditorView.updateListener.of((update: ViewUpdate) => {
+          if (update.view && onEditorViewReady) {
+            onEditorViewReady(update.view);
+          }
         }),
       ]}
       onChange={(val) => onChange(val)}

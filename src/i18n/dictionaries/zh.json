@@ -1,0 +1,73 @@
+{
+  "app": {
+    "title": "MK2PDF — Markdown 转 PDF 编辑器 | 隐私优先转换器",
+    "description": "一个强大的在线 Markdown 转 PDF 转换器，支持实时预览、模板和导出选项。隐私优先 — 所有操作都在您的浏览器中运行。没有任何数据离开您的设备。"
+  },
+  "header": {
+    "logoBadge": "专业版",
+    "themeToggle": "切换主题"
+  },
+  "toolbar": {
+    "upload": "📁 导入文件",
+    "uploadFormats": "MD、TXT、HTML、JSON、CSV、TSV",
+    "templates": "📄 模板",
+    "export": "📥 导出",
+    "exporting": "生成中..."
+  },
+  "editor": {
+    "title": "✏️ 编辑器",
+    "words": "词",
+    "chars": "字符",
+    "lines": "行"
+  },
+  "preview": {
+    "title": "👁️ 预览"
+  },
+  "statusBar": {
+    "ready": "就绪",
+    "shortcut": "Ctrl+S 导出",
+    "markdown": "Markdown",
+    "multiExport": "多格式导出",
+    "encoding": "UTF-8"
+  },
+  "toast": {
+    "fileLoaded": "已将 {format} 文件转换为 Markdown",
+    "fileError": "支持 Markdown、文本、HTML、JSON、CSV、TSV 格式",
+    "exportSuccess": "{format} 导出成功！",
+    "exportError": "导出失败，请重试。",
+    "previewNotReady": "预览尚未准备好，请重试。"
+  },
+  "modal": {
+    "title": "导出文档",
+    "filename": "文件名",
+    "format": "输出格式",
+    "formatHint": "可直接导出为浏览器本地可生成的格式：PDF、HTML、DOC、RTF、TXT、MD、JSON、CSV、XML。",
+    "pageSize": "页面大小",
+    "margin": "边距 (毫米)",
+    "quality": "图像质量",
+    "pdfOptions": "PDF 选项",
+    "cancel": "取消",
+    "download": "下载文件",
+    "generating": "生成中...",
+    "formats": {
+      "pdf": "PDF 文档 (.pdf)",
+      "html": "HTML 页面 (.html)",
+      "doc": "Word 文档 (.doc)",
+      "rtf": "富文本 (.rtf)",
+      "txt": "纯文本 (.txt)",
+      "md": "Markdown (.md)",
+      "json": "结构化 JSON (.json)",
+      "csv": "表格 CSV (.csv)",
+      "xml": "XML 大纲 (.xml)"
+    },
+    "sizeA4": "A4 (210 × 297 毫米)",
+    "sizeLetter": "信纸 (8.5 × 11 英寸)",
+    "qualityStandard": "标准 (80%)",
+    "qualityHigh": "高 (95%)",
+    "qualityMax": "最高 (100%)"
+  },
+  "dragdrop": {
+    "message": "拖放文件到这里，自动转换为 Markdown"
+  },
+  "welcome": "# 欢迎使用 MK2PDF ✨\n\n一个基于 Next.js 构建的强大、隐私优先的 **Markdown 转 PDF** 编辑器。\n\n---\n\n## 功能特点\n\n- ✅ **实时预览** — 实时查看您的更改\n- ✅ **丰富的格式** — 全面支持 GitHub 风格的 Markdown\n- ✅ **PDF 导出** — 立即下载高质量的 PDF 文件\n- ✅ **模板** — 从专业模板开始\n- ✅ **深色/浅色模式** — 选择您喜欢的主题\n- ✅ **隐私优先** — 一切都在您的浏览器中运行\n\n## 快速开始\n\n尝试在左侧面板中编辑此文本！预览将立即更新。\n\n### 代码块\n\n```typescript\ninterface Document {\n  title: string;\n  content: string;\n  createdAt: Date;\n}\n\nfunction createPdf(doc: Document): Promise<Blob> {\n  // 您生成 PDF 的逻辑\n  return generatePdf(doc);\n}\n```\n\n### 表格\n\n| 功能特点     | 状态 | 优先级 |\n| :----------- | :--: | :----: |\n| 实时预览     |  ✅  |   高   |\n| PDF 导出     |  ✅  |   高   |\n| 模板         |  ✅  |   中   |\n| 深色模式     |  ✅  |   中   |\n\n### 引用\n\n> “预测未来的最好方法就是创造未来。”\n> — 德鲁克\n\n### 任务列表\n\n- [x] 安装 MK2PDF\n- [x] 编写您的文档\n- [ ] 导出为 PDF\n- [ ] 与世界分享\n\n---\n\n*使用 Next.js、CodeMirror 和 React Markdown 精心制作 ❤️*\n"
+}

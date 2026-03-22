@@ -2,19 +2,30 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { templates, Template } from '@/lib/templates';
+import { getAcceptedFileTypes } from '@/lib/converters';
 
 interface ToolbarProps {
   onInsert: (text: string) => void;
   onLoadTemplate: (content: string) => void;
+  onLoadFile: (file: File) => void;
   onExport: () => void;
   isExporting: boolean;
+  t: {
+    upload: string;
+    uploadFormats: string;
+    templates: string;
+    export: string;
+    exporting: string;
+  };
 }
 
 export default function Toolbar({
   onInsert,
   onLoadTemplate,
+  onLoadFile,
   onExport,
   isExporting,
+  t
 }: ToolbarProps) {
   const [showTemplates, setShowTemplates] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -28,6 +39,14 @@ export default function Toolbar({
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      onLoadFile(file);
+    }
+    e.target.value = '';
+  };
 
   const formatActions = [
     { icon: '𝐁', title: 'Bold (Ctrl+B)', insert: '**bold**' },
@@ -113,13 +132,24 @@ export default function Toolbar({
 
       <div className="toolbar-spacer" />
 
+      <label className="template-btn" style={{ cursor: 'pointer', marginRight: '8px' }}>
+        {t.upload}
+        <input 
+          type="file" 
+          accept={getAcceptedFileTypes()}
+          style={{ display: 'none' }} 
+          onChange={handleFileUpload}
+        />
+      </label>
+      <span className="toolbar-formats">{t.uploadFormats}</span>
+
       <div className="template-selector" ref={dropdownRef}>
         <button
           className="template-btn"
           onClick={() => setShowTemplates(!showTemplates)}
           id="template-selector-btn"
         >
-          📄 Templates
+          {t.templates}
         </button>
         {showTemplates && (
           <div className="template-dropdown">
@@ -153,10 +183,10 @@ export default function Toolbar({
         {isExporting ? (
           <>
             <span className="spinner" />
-            Generating...
+            {t.exporting}
           </>
         ) : (
-          <>📥 Download PDF</>
+          <>{t.export}</>
         )}
       </button>
     </div>

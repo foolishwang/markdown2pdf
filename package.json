@@ -6,6 +6,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",
+    "deploy": "vinext deploy",
     "lint": "eslint"
   },
   "dependencies": {
@@ -23,15 +24,18 @@
     "vinext": "^0.0.21"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.26.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.70.0"
   },
   "optionalDependencies": {
     "@rollup/rollup-darwin-arm64": "^4.59.0",
     "@rollup/rollup-linux-x64-gnu": "^4.59.0"
-  }
+  },
+  "type": "module"
 }
